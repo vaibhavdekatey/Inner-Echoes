@@ -1,7 +1,30 @@
 import featuredImage from "../assets/texture.png";
+import sky from "../assets/sky.jpg";
 import g1 from "../assets/g1.png";
 import g2 from "../assets/g2.png";
 import g3 from "../assets/g3.png";
+
+export const author = {
+  name: "Vaibhav Dekatey",
+  image: sky,
+  about: `Hello! I'm Vaibhav Dekatey, the author of this blog. I am passionate
+          about Anime, Art, Video Games, Music, Coffee and much more. This blog
+          is a space where I share my thoughts, experiences, and knowledge on
+          various topics that interest me. I hope you find the content here
+          informative and engaging.\n
+        
+          I started this blog as a way to document my journey and share my
+          insights with a wider audience. Whether it's about Anime, Video Games,
+          or Coffee, I strive to provide valuable and interesting content. When
+          I'm not blogging, you can find me doing some sort of art.\n
+         
+          Feel free to reach out to me through the contact form if you have any
+          questions, suggestions, or just want to connect. Thank you for
+          visiting my blog, and I hope you enjoy reading it as much as I enjoy
+          writing it!`,
+  anotherAbout:
+    "Hi! I’m Vaibhav Dekatey, and welcome to my blog. I’m deeply passionate about Anime, Art, Video Games, Music, Coffee, and so much more. Whether you’re here to explore, learn, or just have a good read, I aim to make this space a hub for curiosity, creativity, and connection",
+};
 
 export const featuredArticle = {
   id: 1,

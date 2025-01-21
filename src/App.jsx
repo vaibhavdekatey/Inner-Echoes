@@ -12,6 +12,8 @@ import Footer from "./Components/Footer";
 import MailMe from "./Components/MailMe";
 import GetinTouch from "./Components/GetinTouch";
 import Header from "./Components/Header";
+import AboutMe from "./AboutMe";
+import FeaturedPost from "./FeaturedPost";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <div className="sticky top-0 z-20 ">
-          <Header />
+          <Header header="HOME" />
         </div>
         <Homepage />
         <MailMe />
@@ -33,9 +35,37 @@ const router = createBrowserRouter([
     element: (
       <>
         <div className="sticky top-0 z-20 ">
+          <Header header="ABOUT" />
+        </div>
+        <AboutMe />
+        <MailMe />
+        <GetinTouch />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/Post/:id",
+    element: (
+      <>
+        <div className="sticky top-0 z-20 ">
           <Header />
         </div>
 
+        <GetinTouch />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/featuredPost",
+    element: (
+      <>
+        <div className="sticky top-0 z-20 ">
+          <Header />
+        </div>
+
+        <FeaturedPost />
         <MailMe />
         <GetinTouch />
         <Footer />

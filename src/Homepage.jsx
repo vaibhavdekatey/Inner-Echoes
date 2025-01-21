@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Components/Header";
 import { featuredArticle, articles } from "./Articles/articles";
 import MiniArticle from "./Components/MiniArticle";
+import { Link } from "react-router-dom";
 
 const res = articles.slice(0, 2);
 
@@ -61,7 +62,10 @@ function Homepage() {
                 {featuredArticle.content.slice(0, 60)}...
               </p>
             </div>
-            <div className="bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit ">
+            <Link
+              to="/featuredPost"
+              className="bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
@@ -79,7 +83,7 @@ function Homepage() {
                   d="m14 16l4-4m0 0l-4-4m4 4H6"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
         {/* You can add more content here */}

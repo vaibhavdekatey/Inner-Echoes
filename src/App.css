@@ -1,3 +1,6 @@
 body {
   background-color: #dbdbdb;
 }
+html {
+  scroll-behavior: smooth;
+}
