@@ -14,6 +14,8 @@ import GetinTouch from "./Components/GetinTouch";
 import Header from "./Components/Header";
 import AboutMe from "./AboutMe";
 import FeaturedPost from "./FeaturedPost";
+import Post from "./Post";
+import AllPosts from "./AllPosts";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +53,7 @@ const router = createBrowserRouter([
         <div className="sticky top-0 z-20 ">
           <Header />
         </div>
-
+        <Post />
         <GetinTouch />
         <Footer />
       </>
@@ -66,6 +68,21 @@ const router = createBrowserRouter([
         </div>
 
         <FeaturedPost />
+        <MailMe />
+        <GetinTouch />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/Posts",
+    element: (
+      <>
+        <div className="sticky top-0 z-20 ">
+          <Header />
+        </div>
+
+        <AllPosts />
         <MailMe />
         <GetinTouch />
         <Footer />

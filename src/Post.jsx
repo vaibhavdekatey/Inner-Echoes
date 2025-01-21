@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { articles, featuredArticle } from "./Articles/articles";
+import { articles } from "./Articles/articles";
 import MiniArticle from "./Components/MiniArticle";
 import MiniMe from "./Components/MiniMe";
 
-function FeaturedPost() {
+function Post() {
+  const [offSet, setOffset] = useState(false);
+
   let navigate = useNavigate();
+  const params = useParams();
+  const featuredArticle = articles.find(
+    (article) => article.id === parseInt(params.id)
+  );
+  const filtered = articles.filter((fil) => fil.id !== parseInt(params.id));
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [params.id]);
+
   return (
     <>
       <div className="flex flex-col items-center mx-[24vw] transition-all ease-in-out">
@@ -43,7 +52,7 @@ function FeaturedPost() {
           style={{
             backgroundImage: `url(${featuredArticle.image})`,
           }}
-          className={` flex items-end justify-center rounded-2xl bg-cover w-full h-[60dvh] `}
+          className={`flex items-end justify-center rounded-2xl bg-cover w-full h-[60dvh]`}
         ></div>
         <div className="whitespace-pre-line mx-6 my-6 flex flex-row justify-between w-full items-end">
           <div className="w-fit flex flex-col">
@@ -55,14 +64,16 @@ function FeaturedPost() {
             </p>
           </div>
         </div>
-
         <MiniMe />
         <div className="border-t-[1px] border-black/30 mt-3 w-full" />
         <div className="w-full ">
           <div className="flex flex-row items-center mt-20 mb-4">
-            <a
+            <Link
+              to={"/Posts"}
+              onMouseOver={() => setOffset(true)}
+              onMouseLeave={() => setOffset(false)}
               href="#"
-              className="text-black/95 text-5xl italic font-dmSerif flex flex-row "
+              className="text-black/95 text-5xl italic font-dmSerif flex flex-row hover:underline hover:underline-offset-4 hover:decoration-[1px] transition-all ease-out"
             >
               ALL POSTS
               <svg
@@ -70,7 +81,9 @@ function FeaturedPost() {
                 width="48"
                 height="48"
                 viewBox="0 0 24 24"
-                className="p-2 hover:translate-x-1"
+                className={`p-2 mx-2 transition-all ease-out ${
+                  offSet && "translate-x-3"
+                }`}
               >
                 <path
                   fill="none"
@@ -79,13 +92,13 @@ function FeaturedPost() {
                   strokeLinejoin="round"
                   strokeMiterlimit="10"
                   strokeWidth="1.5"
-                  d="m14 16l4-4m0 0l-4-4m4 4H6"
+                  d="m14 16l4-4m0 0l-4-4m4 4H1"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-row items-start w-full mb-16">
-            {articles.slice(0, 2).map((mini) => (
+            {filtered.slice(0, 2).map((mini) => (
               <MiniArticle
                 key={mini.id}
                 id={mini.id}
@@ -103,4 +116,4 @@ function FeaturedPost() {
   );
 }
 
-export default FeaturedPost;
+export default Post;

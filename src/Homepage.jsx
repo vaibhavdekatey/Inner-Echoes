@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import { featuredArticle, articles } from "./Articles/articles";
 import MiniArticle from "./Components/MiniArticle";
@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 const res = articles.slice(0, 2);
 
 function Homepage() {
+  const [offSet, setOffset] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative px-4">
       {/* Sticky header that overlays the image */}
@@ -14,9 +19,12 @@ function Homepage() {
       {/* Hero section with image */}
       <div className=" mx-[16vw] ">
         <div className="flex flex-row items-center justify-center my-14">
-          <a
+          <Link
+            to={"/Posts"}
+            onMouseOver={() => setOffset(true)}
+            onMouseLeave={() => setOffset(false)}
             href="#"
-            className="text-black/95 text-5xl italic font-dmSerif flex flex-row "
+            className="text-black/95 text-5xl italic font-dmSerif flex flex-row hover:underline hover:underline-offset-4 hover:decoration-[1px] transition-all ease-out"
           >
             ALL POSTS
             <svg
@@ -24,7 +32,9 @@ function Homepage() {
               width="48"
               height="48"
               viewBox="0 0 24 24"
-              className="p-2 hover:translate-x-1"
+              className={`p-2 mx-2 transition-all ease-out ${
+                offSet && "translate-x-3"
+              }`}
             >
               <path
                 fill="none"
@@ -33,10 +43,10 @@ function Homepage() {
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
                 strokeWidth="1.5"
-                d="m14 16l4-4m0 0l-4-4m4 4H6"
+                d="m14 16l4-4m0 0l-4-4m4 4H1"
               />
             </svg>
-          </a>
+          </Link>
         </div>
         {/* nvm */}
         <div
@@ -64,7 +74,7 @@ function Homepage() {
             </div>
             <Link
               to="/featuredPost"
-              className="bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit "
+              className="bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit hover:p-2 "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +107,7 @@ function Homepage() {
           title={res[0].title}
           content={res[0].content}
           image={res[0].image}
+          id={res[0].id}
           style=" "
           divStyle="w-7/12"
         />
@@ -104,6 +115,7 @@ function Homepage() {
           title={res[1].title}
           content={res[1].content}
           image={res[1].image}
+          id={res[1].id}
           style=" "
           divStyle="ml-6 w-6/12"
         />

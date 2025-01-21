@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sky from "./assets/sky.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AboutMe() {
+  let navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="flex flex-col items-center mx-[24vw] transition-all ease-in-out">
         <Link
-          to="/"
+          onClick={() => navigate(-1)}
           className=" mb-4 bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full self-start"
         >
           <svg

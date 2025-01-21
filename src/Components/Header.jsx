@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Header({ header, absoluteStyles }) {
   const [visible, setVisible] = useState(false);
   return (
     <>
       <div className="justify-between flex flex-row items-center py-4 px-2 bg-[#dbdbdb]">
-        <a href="#" className="text-black font-dmSerif text-6xl ml-4">
+        <NavLink to={"/"} className="text-black font-dmSerif text-6xl ml-4">
           INNER ECHOES
-        </a>
+        </NavLink>
         <div className="flex flex-row justify-between items-center">
-          <a
-            href="/"
+          <NavLink
+            to={"/"}
             className={`  transition-all ease-in-out ${
               header === "HOME"
                 ? "italic bg-black text-white py-2 px-3 rounded-md"
@@ -18,9 +19,9 @@ function Header({ header, absoluteStyles }) {
             }`}
           >
             HOME
-          </a>
-          <a
-            href="About"
+          </NavLink>
+          <NavLink
+            to={"/About"}
             className={`  transition-all ease-in-out ${
               header === "ABOUT"
                 ? "italic bg-black text-white py-2 px-3 rounded-md ml-16 tracking-widest font-lexendDeca font-light"
@@ -28,7 +29,7 @@ function Header({ header, absoluteStyles }) {
             }`}
           >
             ABOUT
-          </a>
+          </NavLink>
           <a
             href="#getintouch"
             className="text-black ml-16 tracking-widest font-lexendDeca font-light hover:italic hover:text-neutral-600 transition-all ease-in-out"
@@ -39,6 +40,7 @@ function Header({ header, absoluteStyles }) {
             <a
               onMouseOver={() => setVisible(true)}
               onMouseLeave={() => setVisible(false)}
+              target="_blank"
               href="https://www.vaibhavdekatey.site"
               className="text-black tracking-widest font-lexendDeca font-light  hover:text-neutral-600 transition-all ease-in-out"
             >
