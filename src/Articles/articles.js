@@ -1,8 +1,8 @@
-import featuredImage from "../assets/texture.png";
+import featuredImage from "../assets/texture.webp";
 import sky from "../assets/sky.jpg";
-import g1 from "../assets/g1.png";
-import g2 from "../assets/g2.png";
-import g3 from "../assets/g3.png";
+import g1 from "../assets/g1.jpg";
+import g2 from "../assets/g2.jpg";
+import g3 from "../assets/g3.jpg";
 
 export const author = {
   name: "Vaibhav Dekatey",

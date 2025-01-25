@@ -13,7 +13,7 @@ function GetinTouch() {
       </p>
       <a
         href="#"
-        className="border-[1px] border-black px-4 w-32 h-10 text-center rounded-md font-dmSerif hover:italic hover:bg-white/80 transition-all ease-in-out text-base p-2 m-2 align-text-top"
+        className="bg-black transition-all ease-in-out w-32 h-12 border-white/20 text-white border-[1px] hover:bg-white hover:text-black rounded-md font-dmSerif text-center justify-center items-center flex text-base p-2 m-2 "
       >
         Mail Me
       </a>

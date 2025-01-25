@@ -17,13 +17,12 @@ function Homepage() {
       {/* Sticky header that overlays the image */}
 
       {/* Hero section with image */}
-      <div className=" mx-[16vw] ">
-        <div className="flex flex-row items-center justify-center my-14">
+      <div className=" mx-[24vw] ">
+        {/* <div className="flex flex-row items-center justify-center my-14">
           <Link
             to={"/Posts"}
             onMouseOver={() => setOffset(true)}
             onMouseLeave={() => setOffset(false)}
-            href="#"
             className="text-black/95 text-5xl italic font-dmSerif flex flex-row hover:underline hover:underline-offset-4 hover:decoration-[1px] transition-all ease-out"
           >
             ALL POSTS
@@ -47,19 +46,24 @@ function Homepage() {
               />
             </svg>
           </Link>
-        </div>
+        </div> */}
+
         {/* nvm */}
-        <div
-          style={{
-            backgroundImage: `url(${featuredArticle.image})`,
-          }}
-          className={` flex items-end justify-center rounded-2xl bg-cover w-full h-[60dvh] `}
-        >
-          <div className="whitespace-pre-line mx-6 my-6 flex flex-row justify-between w-full items-end">
+        <div className="flex flex-col justify-between border-[1px] border-white my-10">
+          <div
+            style={{
+              backgroundImage: `url(${featuredArticle.image})`,
+            }}
+            className={` flex items-start justify-start  bg-cover w-full h-[52dvh] `}
+          >
             <div className="w-fit flex flex-col">
-              <p className="text-neutral-800/80 font-lexendDeca font-light text-sm w-fit bg-white/80 py-1 px-3 rounded-2xl border-[1px] border-white/70 border-solid">
+              <p className="text-neutral-100 font-lexendDeca font-extralight text-2xl w-fit bg-neutral-700 py-3 px-16 border-r-[1px] border-b-[1px] border-white border-solid">
                 Featured Article
               </p>
+            </div>
+          </div>
+          <div className="whitespace-pre-line  flex flex-row justify-between w-full items-start">
+            <div className="mx-5 my-4">
               <p className="text-neutral-100 font-dmSerif font italic text-5xl w-fit">
                 {featuredArticle.title}
               </p>
@@ -67,30 +71,34 @@ function Homepage() {
                 style={{
                   textShadow: " 1px 2px #000",
                 }}
-                className="text-neutral-100 font text-sm font-lexendDeca font-thin w-fit"
+                className="text-neutral-100 font text-base font-lexendDeca font-thin w-fit"
               >
-                {featuredArticle.content.slice(0, 60)}...
+                {featuredArticle.content.slice(0, 200)}...
               </p>
+              <Link className="text-white font-lexendDeca hover:italic hover:text-cyan-400 text-xs font-thin">
+                Continue Reading...
+              </Link>
             </div>
             <Link
               to="/featuredPost"
-              className="bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit hover:p-2 "
+              className="group bg-black border-[1px] border-white hover:bg-white ease-in-out transition-all m-4 w-fit h-fit"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
+                width="40"
+                height="40"
                 viewBox="0 0 24 24"
                 className="-rotate-45"
               >
                 <path
                   fill="none"
-                  stroke="#242424"
+                  stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeMiterlimit="10"
-                  strokeWidth="1.5"
+                  strokeWidth="1"
                   d="m14 16l4-4m0 0l-4-4m4 4H6"
+                  className="transition-colors duration-300 stroke-white group-hover:stroke-black"
                 />
               </svg>
             </Link>

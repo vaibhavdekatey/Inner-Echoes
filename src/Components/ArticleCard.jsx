@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function ArticleCard({ id, author, title, content, date, image }) {
-  console.log(author);
+  const [offSet, setOffset] = useState(false);
 
   return (
     <>
-      <div className="flex flex-row bg-neutral-400/70 w-[56vw] h-[30vh] my-6 rounded-xl">
+      <div className="flex flex-row bg-neutral-400/70 w-[56vw] h-[38vh] my-6 rounded-xl">
         <img
           src={`${image}`}
-          className="h-[30vh] aspect-[4/3] object-cover rounded-l-xl"
+          className="h-[38vh] aspect-[4/3] object-cover rounded-l-xl"
         />
         <div className="flex flex-col justify-between p-6">
           <div className="flex flex-col">
@@ -30,14 +30,16 @@ function ArticleCard({ id, author, title, content, date, image }) {
               </p>
             </div>
 
-            <p className="text-black font-dmSerif text-3xl mt-4">{title}</p>
-            <p className="text-black/80 font-lexendDeca text-base mt-2">
-              {content.slice(0, 220)}...
+            <p className="text-black font-dmSerif text-5xl my-2 ">{title}</p>
+            <p className="text-black/90 font-lexendDeca text-base font-light mt-2">
+              {content.slice(0, 240)}...
             </p>
           </div>
           <Link
             to={`/Post/${id}`}
-            className="text-neutral-800 hover:text-cyan-900 transition-all ease-in-out text-sm font-lexendDeca italic flex flex-row mt-1 items-center"
+            onMouseOver={() => setOffset(true)}
+            onMouseLeave={() => setOffset(false)}
+            className={`text-neutral-950 w-fit hover:text-cyan-900 transition-all ease-in-out text-sm font-lexendDeca italic font-extralight flex flex-row mt-1 items-center`}
           >
             Continue Reading
             <svg
@@ -45,7 +47,9 @@ function ArticleCard({ id, author, title, content, date, image }) {
               width="20"
               height="20"
               viewBox="0 0 24 24"
-              className="ml-2"
+              className={`ml-1 transition-all ease-in ${
+                offSet && "translate-x-2"
+              }`}
             >
               <path
                 fill="none"
@@ -54,7 +58,7 @@ function ArticleCard({ id, author, title, content, date, image }) {
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
                 strokeWidth="0.7"
-                d="m14 16l4-4m0 0l-4-4m4 4H1"
+                d="m14 16l4-4m0 0l-4-4m4 4H2"
               />
             </svg>
           </Link>
