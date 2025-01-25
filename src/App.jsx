@@ -16,17 +16,19 @@ import AboutMe from "./AboutMe";
 import FeaturedPost from "./FeaturedPost";
 import Post from "./Post";
 import AllPosts from "./AllPosts";
+import Checkthese from "./Components/Checkthese";
+import MiniMe from "./Components/MiniMe";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
-        <div className="sticky top-0 z-20 ">
+        <div className=" ">
           <Header header="HOME" />
         </div>
         <Homepage />
-        <MailMe />
+
         <GetinTouch />
         <Footer />
       </>
@@ -36,11 +38,12 @@ const router = createBrowserRouter([
     path: "/About",
     element: (
       <>
-        <div className="sticky top-0 z-20 ">
+        <div className="">
           <Header header="ABOUT" />
         </div>
         <AboutMe />
         <MailMe />
+        <Checkthese />
         <GetinTouch />
         <Footer />
       </>
@@ -50,7 +53,7 @@ const router = createBrowserRouter([
     path: "/Post/:id",
     element: (
       <>
-        <div className="sticky top-0 z-20 ">
+        <div className="">
           <Header />
         </div>
         <Post />
@@ -63,7 +66,7 @@ const router = createBrowserRouter([
     path: "/featuredPost",
     element: (
       <>
-        <div className="sticky top-0 z-20 ">
+        <div className=" ">
           <Header />
         </div>
 
@@ -78,12 +81,18 @@ const router = createBrowserRouter([
     path: "/Posts",
     element: (
       <>
-        <div className="sticky top-0 z-20 ">
-          <Header />
+        <div className="  ">
+          <Header header="allPosts" />
         </div>
 
         <AllPosts />
         <MailMe />
+        <div className="w-full flex justify-center items-center mb-[5vw]">
+          <div className="w-8/12">
+            <MiniMe />
+          </div>
+        </div>
+
         <GetinTouch />
         <Footer />
       </>

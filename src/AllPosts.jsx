@@ -10,31 +10,32 @@ function AllPosts() {
   }, []);
   return (
     <>
-      <div className="relative flex flex-col mx-[22vw]">
+      <div className="relative flex flex-col mx-[22vw] my-[4vh]">
         <div className="flex flex-row w-full justify-center">
           <Link
             onClick={() => navigate(-1)}
-            className=" mb-4 bg-white/80 hover:bg-cyan-500 ease-in-out transition-all rounded-full w-fit h-fit flex justify-center items-center absolute top-0 left-0"
+            className=" mb-4 bg-black hover:bg-white ease-in-out transition-all border-[1px] group border-white w-fit h-fit flex justify-center items-center absolute top-0 left-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
               height="48"
               viewBox="0 0 24 24"
-              className="rotate-180"
+              className="rotate-180 transition-colors duration-300 stroke-white group-hover:stroke-black"
             >
               <path
                 fill="none"
-                stroke="#242424"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
                 strokeWidth="1.5"
                 d="m14 16l4-4m0 0l-4-4m4 4H6"
+                className="transition-colors duration-300 stroke-white group-hover:stroke-black"
               />
             </svg>
           </Link>
-          <p className="text-black/95 text-5xl italic font-dmSerif transition-all ease-out">
+          <p className="text-white text-5xl italic font-dmSerif transition-all ease-out">
             ALL POSTS
           </p>
         </div>

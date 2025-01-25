@@ -6,10 +6,10 @@ function ArticleCard({ id, author, title, content, date, image }) {
 
   return (
     <>
-      <div className="flex flex-row bg-neutral-400/70 w-[56vw] h-[38vh] my-6 rounded-xl">
+      <div className="flex flex-row bg-neutral-800 w-[56vw] h-[38vh] my-6 border-[1px] border-white">
         <img
           src={`${image}`}
-          className="h-[38vh] aspect-[4/3] object-cover rounded-l-xl"
+          className="h-[38vh] aspect-[4/3] object-cover pb-[2px]"
         />
         <div className="flex flex-col justify-between p-6">
           <div className="flex flex-col">
@@ -21,17 +21,17 @@ function ArticleCard({ id, author, title, content, date, image }) {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="#242424"
+                  fill="#ffffff"
                   d="M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-8H2zM19 4h-2V3c0-.6-.4-1-1-1s-1 .4-1 1v1H9V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v2h20V7c0-1.7-1.3-3-3-3"
                 />
               </svg>
-              <p className="text-black/80 font-lexendDeca text-sm ml-2">
+              <p className="text-neutral-400 font-lexendDeca text-sm ml-2">
                 {date}
               </p>
             </div>
 
-            <p className="text-black font-dmSerif text-5xl my-2 ">{title}</p>
-            <p className="text-black/90 font-lexendDeca text-base font-light mt-2">
+            <p className="text-white font-dmSerif text-5xl my-2 ">{title}</p>
+            <p className="text-white/90 font-lexendDeca text-base font-light mt-2">
               {content.slice(0, 240)}...
             </p>
           </div>
@@ -39,7 +39,7 @@ function ArticleCard({ id, author, title, content, date, image }) {
             to={`/Post/${id}`}
             onMouseOver={() => setOffset(true)}
             onMouseLeave={() => setOffset(false)}
-            className={`text-neutral-950 w-fit hover:text-cyan-900 transition-all ease-in-out text-sm font-lexendDeca italic font-extralight flex flex-row mt-1 items-center`}
+            className={`text-neutral-300 w-fit hover:text-cyan-500 transition-all ease-in-out text-sm font-lexendDeca italic font-extralight flex flex-row mt-1 items-center`}
           >
             Continue Reading
             <svg
@@ -53,7 +53,7 @@ function ArticleCard({ id, author, title, content, date, image }) {
             >
               <path
                 fill="none"
-                stroke="#1e1e1e"
+                stroke="#e1e1e1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"

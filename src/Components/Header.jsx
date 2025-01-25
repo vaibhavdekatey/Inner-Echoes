@@ -37,6 +37,16 @@ function Header({ header, absoluteStyles }) {
           >
             ABOUT
           </NavLink>
+          <NavLink
+            to={"/Posts"}
+            className={`  transition-all ease-in-out w-[160px] border-x-[1px] border-solid text-center border-white  ${
+              header === "allPosts"
+                ? "italic bg-white text-black py-2 px-3 tracking-widest font-lexendDeca font-light"
+                : "text-white tracking-widest py-2 px-3 font-lexendDeca font-light  hover:text-cyan-500"
+            }`}
+          >
+            ALL POSTS
+          </NavLink>
           <a
             href="#getintouch"
             className="text-white tracking-widest font-lexendDeca w-[160px] font-light text-center hover:text-cyan-500 transition-all ease-in-out"

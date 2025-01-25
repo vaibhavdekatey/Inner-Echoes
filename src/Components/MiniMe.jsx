@@ -4,7 +4,7 @@ import { author } from "../Articles/articles";
 function MiniMe() {
   return (
     <>
-      <div className="flex flex-col bg-slate-900 rounded-xl p-8 pb-9 mb-8">
+      <div className="flex flex-col bg-neutral-900 border-[1px] border-white/60 p-8 pb-9 mb-8">
         {/* <p className="text-black font-dmSerif text-3xl">Author</p>
         <div className="border-t-[1px] border-black/60 mb-4 w-11/12" /> */}
         <div className="flex flex-row w-full ">
@@ -13,7 +13,7 @@ function MiniMe() {
             <img
               src={`${author.image}`}
               style={{ backgroundPosition: "bottom 10px right 10px" }}
-              className="w-[10vw] rounded-2xl aspect-square shadow-2xl shadow-cyan-950"
+              className="w-[10vw] aspect-square "
             />
           </div>
           <div className="flex flex-col flex-wrap w-9/12">
