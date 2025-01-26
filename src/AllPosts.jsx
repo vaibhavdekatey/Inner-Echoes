@@ -10,8 +10,8 @@ function AllPosts() {
   }, []);
   return (
     <>
-      <div className="relative flex flex-col mx-[22vw] my-[4vh]">
-        <div className="flex flex-row w-full justify-center">
+      <div className="relative flex flex-col mx-[23vw] my-[4vh]">
+        <div className="flex flex-row w-full justify-center translate-x-[10px]">
           <Link
             onClick={() => navigate(-1)}
             className=" mb-4 bg-black hover:bg-white ease-in-out transition-all border-[1px] group border-white w-fit h-fit flex justify-center items-center absolute top-0 left-0"
@@ -40,13 +40,14 @@ function AllPosts() {
           </p>
         </div>
         <div className="flex flex-col justify-center items-center">
-          {articles.map((article) => (
+          {[...articles].reverse().map((article) => (
             <ArticleCard
               key={article.id}
               id={article.id}
               author={author.name}
               title={article.title}
               content={article.content}
+              read={article.read}
               image={article.image}
               date={article.date}
             />

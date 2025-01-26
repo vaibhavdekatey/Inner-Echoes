@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { articles } from "../Articles/articles";
 import { Link } from "react-router-dom";
 import MiniArticle from "./MiniArticle";
-const res = articles.slice(0, 2);
+const res = [...articles].reverse();
+console.log(res[0]);
 
 function Checkthese() {
   const [offSet, setOffset] = useState(false);

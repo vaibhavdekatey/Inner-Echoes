@@ -29,6 +29,7 @@ export const author = {
 export const featuredArticle = {
   id: 1,
   image: featuredImage,
+  read: 3,
   date: "22nd November 2024",
   title: `Welcome to Inner Echoes`,
   content: `Lorem ipsum odor amet, consectetuer adipiscing elit. Ligula rhoncus urna iaculis commodo rhoncus platea convallis vitae ex. Erat curae nullam diam faucibus mi fames. Rutrum vivamus parturient urna at ut ac interdum. Maecenas ultricies amet duis scelerisque imperdiet, tellus dignissim nisi. Non senectus varius himenaeos mauris eleifend. Cubilia consequat feugiat ipsum vehicula arcu lacinia. Commodo lobortis nulla sem metus ultrices donec. Sem viverra a quisque ullamcorper neque volutpat maecenas. Magna auctor nulla sapien penatibus diam faucibus purus.
@@ -39,6 +40,7 @@ export const articles = [
   {
     id: 1,
     image: g1,
+    read: 2,
     date: "25th November 2024",
     title: `How Demon Slayer Became a Cultural Phenomenon`,
     content: `The anime "Demon Slayer: Kimetsu no Yaiba" has taken the world by storm, captivating audiences with its stunning animation and heartfelt storytelling. Produced by Ufotable, the series follows Tanjiro Kamado's journey to avenge his family and save his sister, Nezuko, who has been turned into a demon. Its success is not just limited to TV; the movie "Mugen Train" became a global box-office sensation, breaking records in Japan and beyond.
@@ -48,6 +50,7 @@ export const articles = [
   {
     id: 2,
     image: g2,
+    read: 3,
     date: "26th November 2024",
     title: `A Dark Fantasy Masterpiece i.e. Attack on Titan`,
     content: `Since its debut, "Attack on Titan" has captivated audiences worldwide with its intense story, complex characters, and philosophical undertones. The series explores themes of freedom, oppression, and the cyclical nature of hatred through the lens of a world besieged by monstrous Titans. As the story unfolds, it challenges viewers to question the morality of its characters' actions and the true cost of survival.
@@ -57,6 +60,7 @@ export const articles = [
   {
     id: 3,
     image: g3,
+    read: 2,
     date: "29th November 2024",
     title: `My Hero Academia: A Story of Hope and Heroism`,
     content: `Set in a world where superpowers, or "Quirks," are the norm, "My Hero Academia" has quickly become one of the most beloved anime series of recent years. The story follows Izuku Midoriya, a Quirkless boy who dreams of becoming a hero. With guidance from All Might, the world’s greatest hero, Midoriya embarks on a journey filled with intense training, emotional growth, and fierce battles.
@@ -67,6 +71,7 @@ export const articles = [
     id: 4,
     image: featuredImage,
     date: "30th November 2024",
+    read: 2,
     title: `How One Piece's Epic Journey That Redefined Adventure Genre `,
     content: `Eiichiro Oda's "One Piece" has stood the test of time, captivating generations with its epic tale of pirates, friendship, and the pursuit of dreams. Luffy and his Straw Hat crew have sailed through countless adventures in their quest for the legendary treasure, the One Piece. With over 1,000 episodes and chapters, the series remains a cornerstone of anime and manga culture.
   \nThe secret to its success lies in its intricate world-building, unforgettable characters, and ability to balance humor with moments of profound emotion. As the story approaches its climactic arcs, fans are eagerly speculating about the mysteries of the One Piece and the legacy of the series. How has "One Piece" managed to remain relevant and beloved for over two decades?`,
@@ -76,6 +81,7 @@ export const articles = [
     id: 5,
     image: featuredImage,
     date: "1st December 2024",
+    read: 3,
     title: `Studio Ghibli's Legacy of Magical Storytelling`,
     content: `Studio Ghibli has long been synonymous with cinematic excellence, enchanting audiences with its visually stunning and emotionally resonant films. From the whimsical charm of "My Neighbor Totoro" to the profound themes of "Princess Mononoke" and "Spirited Away," each film offers a unique experience that transcends cultural boundaries.
   \nHayao Miyazaki, the studio's co-founder, has been instrumental in creating stories that celebrate nature, love, and the human spirit. The studio's meticulous attention to detail and hand-drawn animation have set a gold standard in the industry. As Studio Ghibli continues to inspire generations, what makes its films timeless works of art?`,

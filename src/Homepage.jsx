@@ -5,7 +5,7 @@ import MiniArticle from "./Components/MiniArticle";
 import { Link } from "react-router-dom";
 import MailMe from "./Components/MailMe";
 
-const res = articles.slice(0, 2);
+const res = [...articles].reverse().slice(0, 2);
 
 function Homepage() {
   const [offSet, setOffset] = useState(false);
@@ -42,7 +42,7 @@ function Homepage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
-                strokeWidth="1.5"
+                strokeWivdth="1.5"
                 d="m14 16l4-4m0 0l-4-4m4 4H1"
               />
             </svg>
@@ -65,9 +65,43 @@ function Homepage() {
           </div>
           <div className="whitespace-pre-line  flex flex-row justify-between w-full items-start">
             <div className="mx-6 my-6">
-              <p className="text-neutral-100 font-dmSerif font italic text-5xl mb-2 w-fit">
+              <p className="text-neutral-100 font-dmSerif font text-5xl mb-2 w-fit">
                 {featuredArticle.title}
               </p>
+              <div className="flex flex-row m-1 my-2">
+                <div className="flex flex-row">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-8H2zM19 4h-2V3c0-.6-.4-1-1-1s-1 .4-1 1v1H9V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v2h20V7c0-1.7-1.3-3-3-3"
+                    />
+                  </svg>
+                  <p className="text-neutral-400 font-lexendDeca text-sm ml-1">
+                    {featuredArticle.date}
+                  </p>
+                </div>
+                <div className="flex flex-row ml-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"
+                    />
+                  </svg>
+                  <p className="text-neutral-400 font-lexendDeca text-sm ml-1">
+                    {featuredArticle.read} Min Read
+                  </p>
+                </div>
+              </div>
               <p
                 style={{
                   textShadow: " 1px 2px #000",
@@ -151,6 +185,8 @@ function Homepage() {
           content={res[0].content}
           image={res[0].image}
           id={res[0].id}
+          read={res[0].read}
+          date={res[0].date}
           style=" "
           divStyle="w-5/12"
         />
@@ -159,6 +195,8 @@ function Homepage() {
           content={res[1].content}
           image={res[1].image}
           id={res[1].id}
+          read={res[1].read}
+          date={res[1].date}
           style=" "
           divStyle="ml-6 w-5/12"
         />
