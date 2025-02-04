@@ -40,7 +40,7 @@ function Checkthese() {
         </Link>
       </div>
 
-      <div className="  mb-[12vh] flex flex-row items-center justify-center mx-[20vw]">
+      <div className="  mb-[12vh] flex flex-row items-center justify-center lg:mx-[20vw]">
         <MiniArticle
           title={res[0].title}
           content={res[0].content}

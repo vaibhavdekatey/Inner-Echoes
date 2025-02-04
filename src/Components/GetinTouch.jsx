@@ -7,7 +7,7 @@ function GetinTouch() {
       className="bg-neutral-900 h-[70vh] flex flex-col justify-center items-center border-y-[1px] border-white"
     >
       <p className="text-white font-dmSerif text-7xl mb-8">Get in Touch</p>
-      <p className="text-white font-lexendDeca font-extralight text-xl w-[40vw] mb-8 text-center">
+      <p className="text-white font-lexendDeca font-extralight text-xl lg:w-[40vw] md:w-[68vw] mb-8 text-center">
         My inbox is always open. Whether you have a question or just want to say
         hello, I'll try my best to get back to you! Feel free to mail me.
       </p>

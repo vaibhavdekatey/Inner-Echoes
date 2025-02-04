@@ -18,7 +18,7 @@ function Homepage() {
       {/* Sticky header that overlays the image */}
 
       {/* Hero section with image */}
-      <div className=" mx-[26vw] ">
+      <div className="md:mx-[10vw] lg:mx-[26vw] ">
         {/* <div className="flex flex-row items-center justify-center my-14">
           <Link
             to={"/Posts"}
@@ -55,7 +55,7 @@ function Homepage() {
             style={{
               backgroundImage: `url(${featuredArticle.image})`,
             }}
-            className={` flex items-start justify-start  bg-cover w-full h-[52dvh] `}
+            className={` flex items-start justify-start  bg-cover w-full lg:h-[52dvh] md:h-[42dvh] `}
           >
             <div className="w-fit flex flex-col -translate-y-8 -translate-x-[1px]">
               <p className="text-neutral-100 font-lexendDeca font-extralight text-xl tracking-[0.4em] uppercase w-fit bg-neutral-700 py-3 px-16 border-[1px] border-white border-solid">
@@ -179,7 +179,7 @@ function Homepage() {
         </Link>
       </div>
 
-      <div className=" mx-[16vw] mb-[12vh] flex flex-row items-center justify-center">
+      <div className=" lg:mx-[16vw] mb-[12vh] flex flex-row items-center justify-center">
         <MiniArticle
           title={res[0].title}
           content={res[0].content}

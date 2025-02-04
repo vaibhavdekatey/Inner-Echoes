@@ -16,7 +16,7 @@ function AboutMe() {
   }, []);
   return (
     <>
-      <div className="flex flex-col items-center mx-[24vw] my-[4vh] transition-all ease-in-out">
+      <div className="flex flex-col items-center lg:mx-[24vw] md:mx-[10vw] my-[4vh] transition-all ease-in-out">
         <Link
           onClick={() => navigate(-1)}
           className=" mb-8 bg-black hover:bg-white ease-in-out transition-all border-[1px] group border-white w-fit h-fit flex justify-center self-start "

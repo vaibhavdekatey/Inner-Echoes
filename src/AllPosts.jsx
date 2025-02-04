@@ -10,7 +10,7 @@ function AllPosts() {
   }, []);
   return (
     <>
-      <div className="relative flex flex-col mx-[23vw] my-[4vh]">
+      <div className="relative flex flex-col lg:mx-[23vw] md:mx-[6vw] my-[4vh]">
         <div className="flex flex-row w-full justify-center translate-x-[10px]">
           <Link
             onClick={() => navigate(-1)}

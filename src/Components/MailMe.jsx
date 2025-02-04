@@ -4,7 +4,7 @@ function MailMe() {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <div className="my-[10vh] flex flex-row px-[18vw] h-[16vh] justify-between items-center bg-neutral-800 border-solid border-y-[1px] border-white">
+    <div className="my-[10vh] flex flex-row lg:px-[18vw] md:px-[10vw] h-[16vh] justify-between items-center bg-neutral-800 border-solid border-y-[1px] border-white">
       <p className="text-white font-dmSerif text-4xl">Never Miss a New Post</p>
       <div className="flex flex-row">
         <form>

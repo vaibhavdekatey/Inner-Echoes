@@ -7,10 +7,10 @@ function ArticleCard({ id, author, title, content, date, image, read }) {
 
   return (
     <>
-      <div className="flex flex-row bg-neutral-900 w-[52vw] h-[38vh] my-6 border-[1px] border-white">
+      <div className="flex flex-row bg-neutral-900 lg:w-[52vw] lg:h-[38vh] md:h-[34vh] my-6 border-[1px] border-white">
         <img
           src={`${image}`}
-          className="h-[38vh] aspect-[4/3] object-cover pb-[2px]"
+          className="lg:h-[38vh] md:h-[34vh] aspect-[4/3] object-cover pb-[2px]"
         />
         <div className="flex flex-col justify-between p-6">
           <div className="flex flex-col">
@@ -49,7 +49,9 @@ function ArticleCard({ id, author, title, content, date, image, read }) {
               </div>
             </div> */}
 
-            <p className="text-white font-dmSerif text-4xl my-2 ">{title}</p>
+            <p className="text-white font-dmSerif lg:text-4xl md:text-3xl my-2 ">
+              {title}
+            </p>
             <div className="flex flex-row">
               <div className="flex flex-row">
                 <svg
@@ -84,7 +86,7 @@ function ArticleCard({ id, author, title, content, date, image, read }) {
                 </p>
               </div>
             </div>
-            <p className="text-white/90 font-lexendDeca text-base font-light mt-2">
+            <p className="text-white/90 font-lexendDeca md:text-sm lg:text-base font-light mt-2">
               {content.slice(0, 240)}...
             </p>
           </div>

@@ -8,12 +8,14 @@ function Header({ header, absoluteStyles }) {
       <div className="justify-center flex flex-col items-center bg-[#0f0f0f]">
         <NavLink
           to={"/"}
-          className="text-white font-dmSerif text-8xl justify-center flex flex-col items-center my-12 mt-14 w-[36vw] "
+          className="text-white font-dmSerif  justify-center flex flex-col items-center my-12 mt-14 lg:w-[36vw] "
         >
-          <p className="text-white uppercase font-lexendDeca text-xl font-light tracking-widest text-center w-full px-3">
+          <p className="text-white uppercase font-lexendDeca md:text-xl lg:text-xl font-light tracking-widest text-center w-full px-3">
             Everything is personal here including this blog
           </p>
-          <span className="w-full text-center tracking-wide">INNER ECHOES</span>
+          <span className="w-full text-center tracking-wide md:text-8xl lg:text-8xl">
+            INNER ECHOES
+          </span>
         </NavLink>
 
         <div className="flex flex-row justify-center items-center border-y-[1px] w-[140vw]">
