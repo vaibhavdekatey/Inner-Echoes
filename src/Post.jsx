@@ -137,6 +137,8 @@ function Post() {
           <div className="flex flex-row items-start w-full mb-16">
             {filtered.slice(0, 2).map((mini) => (
               <MiniArticle
+                read={mini.read}
+                date={mini.date}
                 key={mini.id}
                 id={mini.id}
                 title={mini.title}

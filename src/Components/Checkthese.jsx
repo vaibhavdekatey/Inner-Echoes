@@ -42,6 +42,8 @@ function Checkthese() {
 
       <div className="  mb-[12vh] flex flex-row items-center justify-center lg:mx-[20vw]">
         <MiniArticle
+          read={res[0].read}
+          date={res[0].date}
           title={res[0].title}
           content={res[0].content}
           image={res[0].image}
@@ -50,6 +52,8 @@ function Checkthese() {
           divStyle="w-5/12"
         />
         <MiniArticle
+          read={res[1].read}
+          date={res[1].date}
           title={res[1].title}
           content={res[1].content}
           image={res[1].image}
